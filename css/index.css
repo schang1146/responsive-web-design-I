@@ -80,7 +80,14 @@ header {
 	margin: 50px 0px;
 }
 
-header a {
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 550px;
+}
+
+header nav a {
 	color: gray;
 	text-decoration: none;
 }
@@ -202,4 +209,51 @@ footer {
 
 .services-header-img {
 	width: 100%;
+}
+
+@media (max-width: 800px) {
+    .circle_code {
+        display: none;
+    }
+
+    .logo {
+        margin-bottom: 25px;
+    }
+
+    header {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 500px) {
+    header nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header nav a {
+        font-size: 24px;
+        padding: 24px;
+        width: 100%;
+        border-top: 1px gray solid;
+        border-bottom: 1px gray solid;
+    }
+
+    .features_about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .features, .about {
+        width: 100%;
+    }
+
+    .services_product_vision {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services, .product, .vision {
+        width: 100%;
+    }
 }
