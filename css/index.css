@@ -70,21 +70,26 @@ h1, h2, h3, h4, h5 {
 .container {
 	margin: 0 auto;
 	text-align: center;
-	width: 800px;
+	width: 100%;
+	padding: 5%;
 }
 
 header {
 	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 	margin: 50px 0px;
 }
 
 header nav {
-    display: flex;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    width: 550px;
+    width: 65%;
 }
 
 header nav a {
@@ -131,6 +136,8 @@ header nav a {
 
 .services_product_vision {
 	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 	justify-content: space-between;
 }
 
@@ -212,6 +219,10 @@ footer {
 }
 
 @media (max-width: 800px) {
+	header nav {
+		width: 100%;
+	}
+
     .circle_code {
         display: none;
     }
@@ -235,9 +246,12 @@ footer {
         font-size: 24px;
         padding: 24px;
         width: 100%;
-        border-top: 1px gray solid;
         border-bottom: 1px gray solid;
-    }
+	}
+
+	header nav a:first-child {
+		border-top: 1px gray solid;
+	}
 
     .features_about {
         flex-direction: column;
@@ -245,7 +259,8 @@ footer {
     }
 
     .features, .about {
-        width: 100%;
+		width: 100%;
+		margin: 20px 0px;
     }
 
     .services_product_vision {
@@ -254,6 +269,15 @@ footer {
     }
 
     .services, .product, .vision {
-        width: 100%;
-    }
+		width: 100%;
+		margin: 20px 0px;
+	}
+	
+	.middle-img {
+		margin: 20px 0px;
+	}
+
+	.divider {
+		margin: 30px 0px;
+	}
 }
